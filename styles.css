@@ -536,7 +536,9 @@ body::after {
   font-weight: 600;
   letter-spacing: .03em;
   color: #F2E8DC;
-  background: transparent;
+  background: rgba(198,42,46,.45);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   padding: 12px 24px;
   border-radius: 100px;
   border: 1.5px solid #c62a2e;

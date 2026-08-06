@@ -39,11 +39,35 @@
      el loop. Medimos el ancho real de la primera copia con getBoundingClientRect
      (subpíxel) y lo usamos como distancia fija de la animación. ---- */
   (function () {
+    var bar = document.querySelector('.marquee-bar');
     var track = document.querySelector('.marquee-track');
     var firstSet = track && track.querySelector('.marquee-set:not([aria-hidden])');
-    if (!track || !firstSet) return;
+    if (!bar || !track || !firstSet) return;
+
+    /* Con solo 2 copias, en pantallas anchas el track (2x el ancho de una
+       copia) puede ser más angosto que la barra: al desplazarse exactamente
+       un ancho de copia, el contenido se termina antes de volver a tapar
+       la pantalla y se ve un corte en blanco. Clonamos copias ocultas extra
+       hasta que el track cubra de sobra el ancho visible. */
+    function ensureCoverage() {
+      var guard = 0;
+      var setWidth = firstSet.getBoundingClientRect().width;
+      if (setWidth <= 0) return;
+      while (track.scrollWidth < bar.getBoundingClientRect().width * 2 + setWidth && guard < 20) {
+        var clone = firstSet.cloneNode(true);
+        clone.setAttribute('aria-hidden', 'true');
+        clone.querySelectorAll('a').forEach(function (a) {
+          var span = document.createElement('span');
+          span.textContent = a.textContent;
+          a.replaceWith(span);
+        });
+        track.appendChild(clone);
+        guard++;
+      }
+    }
 
     function measure() {
+      ensureCoverage();
       var w = firstSet.getBoundingClientRect().width;
       if (w > 0) track.style.setProperty('--marquee-distance', '-' + w + 'px');
       return w;
