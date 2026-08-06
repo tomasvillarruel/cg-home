@@ -1,0 +1,1234 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Circuito Gastronómico — la guía y revista digital de la gastronomía cordobesa. Rankings, restaurantes y protagonistas de Córdoba.">
+<meta property="og:title" content="Circuito Gastronómico — La gastronomía de Córdoba">
+<meta property="og:image" content="https://circuitogastronomico.com/wp-content/uploads/2026/05/calasan-protagonista-scaled.jpg">
+<link rel="icon" href="https://circuitogastronomico.com/wp-content/uploads/2025/01/cropped-CG-Icono-png-fondo-transparente-32x32.png">
+<title>Circuito Gastronómico — La guía gastronómica de Córdoba</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400;1,500;1,700&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<div class="cur-dot" id="cur-dot" aria-hidden="true"></div>
+<div class="cur-halo" id="cur-halo" aria-hidden="true"></div>
+
+<header class="nav" id="site-nav">
+  <a class="nav__logo" href="#top" aria-label="Circuito Gastronómico — inicio">
+    <img src="logo-blanco.png" alt="Circuito Gastronómico">
+  </a>
+
+  <nav class="nav__links" id="nav-links" aria-label="Navegación principal">
+
+    <!-- Logo mobile menu -->
+    <div class="nav__menu-logo">
+      <img src="logo-blanco.png" alt="Circuito Gastronómico">
+    </div>
+
+    <!-- Links -->
+    <a href="https://circuitogastronomico.com/guia/">Guía</a>
+
+    <div class="nav__item nav__item--has-sub">
+      <a href="https://circuitogastronomico.com/noticias/" class="nav__item-link">
+        Noticias
+        <svg class="nav__chevron" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+      </a>
+      <div class="nav__submenu">
+        <div class="nav__submenu-inner">
+          <a href="https://circuitogastronomico.com/ranking/">Ranking de los mejores</a>
+          <a href="https://circuitogastronomico.com/comer-y-dormir/">Comer y dormir</a>
+          <a href="https://circuitogastronomico.com/protagonistas/">Protagonistas</a>
+          <a href="https://circuitogastronomico.com/semanas-tematicas/">Semanas temáticas</a>
+          <a href="https://circuitogastronomico.com/restaurantes/">Restaurantes</a>
+          <a href="https://circuitogastronomico.com/productos-y-recetas/">Productos y recetas</a>
+          <a href="https://circuitogastronomico.com/proveedores-gastro/">Proveedores gastro</a>
+          <a href="https://circuitogastronomico.com/novedades-y-eventos/">Novedades y eventos</a>
+        </div>
+      </div>
+    </div>
+
+    <a href="https://circuitogastronomico.com/tienda/">Tienda</a>
+
+    <!-- Iconos mobile menu -->
+    <div class="nav__menu-icons">
+      <a href="https://circuitogastronomico.com/carrito/" aria-label="Ver carrito">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+        <span>Carrito</span>
+      </a>
+      <a href="https://circuitogastronomico.com/mi-cuenta/" aria-label="Mi cuenta">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        <span>Mi cuenta</span>
+      </a>
+    </div>
+
+    <!-- Botón cerrar menú -->
+    <button class="nav__menu-close" aria-label="Cerrar menú" id="nav-close">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
+
+  </nav>
+
+  <div class="nav__actions">
+    <form class="nav__search" role="search" action="https://circuitogastronomico.com/" method="get" target="_blank">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.35-4.35"/></svg>
+      <input type="search" name="s" placeholder="Buscar…" aria-label="Buscar en Circuito Gastronómico">
+    </form>
+
+    <a href="https://circuitogastronomico.com/carrito/" class="nav__icon-btn" aria-label="Ver carrito">
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+    </a>
+
+    <a href="https://circuitogastronomico.com/mi-cuenta/" class="nav__icon-btn" aria-label="Mi cuenta">
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+    </a>
+  </div>
+
+  <button class="nav__burger" aria-label="Abrir menú" aria-expanded="false" id="nav-burger">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+  </button>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top" aria-roledescription="carrusel" aria-label="Noticias destacadas">
+  <div class="hero__slides">
+    <div class="hero__slide active">
+      <img src="https://circuitogastronomico.com/wp-content/uploads/2024/05/Caja-La-Gurmet-2023-12_30-baja-1024x683.jpg" alt="La Caja de Agosto: delicatessen cordobesas">
+    </div>
+    <div class="hero__slide">
+      <img src="https://circuitogastronomico.com/wp-content/uploads/2026/07/torneo-pizzas-2026-2-1024x709.jpg" alt="Se extienden los Siete Días de Pizzas">
+    </div>
+    <div class="hero__slide">
+      <img src="https://circuitogastronomico.com/wp-content/uploads/2024/06/herenciatallarines.png" alt="Los mejores restaurantes para comer tallarines en Córdoba">
+    </div>
+    <div class="hero__slide">
+      <img src="https://circuitogastronomico.com/wp-content/uploads/2026/07/pizzas-torneo-1024x618.jpg" alt="Las mejores pizzas del 2026: ganadores del torneo">
+    </div>
+  </div>
+
+  <div class="hero__inner wrap">
+    <div class="hero__copy">
+      <article class="hero__panel active">
+        <div class="hero__eyebrow">
+          <span class="live"><i></i>Nueva edición</span>
+          <span class="tag">Productos y Recetas</span>
+        </div>
+        <h1 class="hero__title">La Caja de <em>Agosto</em></h1>
+        <p class="hero__lead">Dos selecciones curadas con fiambres, quesos y bebidas de productores cordobeses, listas para disfrutar en casa el 26 de agosto.</p>
+        <a class="hero__readlink" href="https://circuitogastronomico.com/la-caja-de-agosto-las-mejores-delicatessen-en-tu-casa/">Ver la nota
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </article>
+
+      <article class="hero__panel">
+        <div class="hero__eyebrow">
+          <span class="live"><i></i>Último momento</span>
+          <span class="tag">Novedades y Eventos</span>
+        </div>
+        <h1 class="hero__title">Siete Días de Pizzas ahora son <em>Doce</em></h1>
+        <p class="hero__lead">La promoción se extiende hasta el viernes 7 de agosto, con descuentos especiales en pizzerías destacadas de Córdoba y la zona.</p>
+        <a class="hero__readlink" href="https://circuitogastronomico.com/ultimo-momento-se-extienden-los-siete-dias-de-pizzas-y-se-convierten-en-doce/">Ver la nota
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </article>
+
+      <article class="hero__panel">
+        <div class="hero__eyebrow">
+          <span class="live"><i></i>Guía</span>
+          <span class="tag">Restaurantes</span>
+        </div>
+        <h1 class="hero__title">Los mejores <em>tallarines</em> de Córdoba</h1>
+        <p class="hero__lead">Una selección de restaurantes para disfrutar de tallarines caseros, de los clásicos de barrio a propuestas italianas y de autor.</p>
+        <a class="hero__readlink" href="https://circuitogastronomico.com/los-mejores-restaurantes-para-comer-tallarines-en-cordoba/">Ver la guía
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </article>
+
+      <article class="hero__panel">
+        <div class="hero__eyebrow">
+          <span class="live"><i></i>Resultados</span>
+          <span class="tag">Ranking de los Mejores</span>
+        </div>
+        <h1 class="hero__title">Así fue el <em>Torneo</em> de Pizzas 2026</h1>
+        <p class="hero__lead">Repasá cómo se vivió la novena edición de Siete Días de Pizzas y quiénes se coronaron campeones en cada categoría.</p>
+        <a class="hero__readlink" href="https://circuitogastronomico.com/las-mejores-pizzas-del-2026-como-fue-el-torneo-y-quienes-ganaron/">Ver los resultados
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </article>
+    </div>
+
+    <div class="hero__controls">
+      <div class="hero__dots" role="tablist" aria-label="Elegir noticia">
+        <button class="hero__dot active" role="tab" aria-selected="true" aria-label="Noticia 1"></button>
+        <button class="hero__dot" role="tab" aria-selected="false" aria-label="Noticia 2"></button>
+        <button class="hero__dot" role="tab" aria-selected="false" aria-label="Noticia 3"></button>
+        <button class="hero__dot" role="tab" aria-selected="false" aria-label="Noticia 4"></button>
+      </div>
+      <span class="hero__count"><b>01</b> / 04</span>
+      <div class="hero__arrows">
+        <button class="hero__arrow" data-dir="-1" aria-label="Noticia anterior">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+        </button>
+        <button class="hero__arrow" data-dir="1" aria-label="Noticia siguiente">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="hero__next" aria-label="Próximas notas">
+      <span class="hero__next-label">Seguí leyendo</span>
+      <div class="hero__next-list">
+        <button class="hero__next-item active" data-index="0" aria-label="Ver: La Caja de Agosto">
+          <span class="hero__next-thumb"><img src="https://circuitogastronomico.com/wp-content/uploads/2024/05/Caja-La-Gurmet-2023-12_30-baja-1024x683.jpg" alt="" loading="lazy"></span>
+          <span class="hero__next-text">
+            <span class="hero__next-title">La Caja de Agosto</span>
+          </span>
+        </button>
+        <button class="hero__next-item" data-index="1" aria-label="Ver: Siete Días de Pizzas ahora son Doce">
+          <span class="hero__next-thumb"><img src="https://circuitogastronomico.com/wp-content/uploads/2026/07/torneo-pizzas-2026-2-1024x709.jpg" alt="" loading="lazy"></span>
+          <span class="hero__next-text">
+            <span class="hero__next-title">Siete Días de Pizzas ahora son Doce</span>
+          </span>
+        </button>
+        <button class="hero__next-item" data-index="2" aria-label="Ver: Los mejores tallarines de Córdoba">
+          <span class="hero__next-thumb"><img src="https://circuitogastronomico.com/wp-content/uploads/2024/06/herenciatallarines.png" alt="" loading="lazy"></span>
+          <span class="hero__next-text">
+            <span class="hero__next-title">Los mejores tallarines de Córdoba</span>
+          </span>
+        </button>
+        <button class="hero__next-item" data-index="3" aria-label="Ver: Así fue el Torneo de Pizzas 2026">
+          <span class="hero__next-thumb"><img src="https://circuitogastronomico.com/wp-content/uploads/2026/07/pizzas-torneo-1024x618.jpg" alt="" loading="lazy"></span>
+          <span class="hero__next-text">
+            <span class="hero__next-title">Así fue el Torneo de Pizzas 2026</span>
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+</section>
+
+<!-- ============ MARQUESINA ============ -->
+<div class="marquee-bar" aria-label="Accesos rápidos a categorías">
+  <div class="marquee-track">
+    <span class="marquee-set">
+      <a href="#destacada">Restaurantes</a><i></i>
+      <a href="#protagonista">Protagonistas</a><i></i>
+      <a href="#gastronomia-argentina">Comer y Dormir</a><i></i>
+      <a href="#directorio">Restaurantes más buscados</a><i></i>
+      <a href="#recetas">Productos y Recetas</a><i></i>
+    </span>
+    <span class="marquee-set" aria-hidden="true">
+      <span>Restaurantes</span><i></i>
+      <span>Protagonistas</span><i></i>
+      <span>Comer y Dormir</span><i></i>
+      <span>Restaurantes más buscados</span><i></i>
+      <span>Productos y Recetas</span><i></i>
+    </span>
+  </div>
+</div>
+
+<!-- ============ NOTA DESTACADA ============ -->
+<!-- ============ AUSPICIANTE (banner horizontal) ============ -->
+<aside class="sponsors" aria-label="Auspiciante">
+  <div class="wrap" style="border-bottom: none;">
+    <div class="sponsors__divider">
+      <span class="kicker">Con el apoyo de</span>
+      <span class="sponsors__line"></span>
+    </div>
+    <div class="card-3d">
+      <div class="sponsors__row">
+        <div class="sponsors__viewport">
+          <a class="sponsors__card active" href="https://www.instagram.com/" target="_blank" rel="noopener sponsored" aria-label="Auspiciante">
+            <picture>
+              <source media="(max-width: 768px)" srcset="Mobile horizontal.png">
+              <img class="sponsors__img" src="Publicidad 3.png" alt="Auspiciante">
+            </picture>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top: clamp(24px, 4vw, 48px); border-bottom: 1px solid var(--line);"></div>
+  </div>
+</aside>
+
+<section class="section wrap" id="destacada">
+  <div class="section__head reveal">
+    <h2 class="section__title serif">Lo que pasa en los <em>restaurantes de Córdoba</em></h2>
+    <a class="section__more" href="https://circuitogastronomico.com/category/rankings-los-mejores/">Ver más notas
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+  </div>
+
+  <div class="ed-grid">
+
+    <!-- COLUMNA IZQUIERDA: card grande -->
+    <div class="ed-left">
+      <div class="card-3d">
+        <a class="ed-main" href="https://circuitogastronomico.com/colombiana-y-amante-de-la-cocina-cordobesa-la-foodie-yeny-ortega/">
+          <div class="ed-main__img">
+            <img src="https://circuitogastronomico.com/wp-content/uploads/2026/07/c7f7d9b1-b201-41d6-b7a9-2259af2ba18e.jpg" alt="Yeny Ortega foodie" loading="lazy">
+          </div>
+          <div class="ed-main__body">
+            <div class="ed-meta">
+              <span class="ed-time">5 min de lectura</span>
+            </div>
+            <h3 class="ed-main__title serif">Colombiana y amante de la cocina cordobesa: la foodie Yeny Ortega</h3>
+            <span class="ed-readmore">Leer la nota <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+          </div>
+        </a>
+      </div>
+
+      <div class="card-3d" style="flex: 0 0 190px">
+        <a class="ed-row" href="https://circuitogastronomico.com/que-tiene-bros-comedor-que-uno-no-resiste-salir-a-contarlo/">
+          <div class="ed-row__img">
+            <img src="https://circuitogastronomico.com/wp-content/uploads/2023/03/Bros-2025_13-cuadrado-1024x1024.jpg" alt="Bros Comedor" loading="lazy">
+          </div>
+          <div class="ed-row__body">
+            <div class="ed-meta">
+              <span class="ed-time">6 min de lectura</span>
+            </div>
+            <h4 class="ed-row__title serif">Qué tiene Bros Comedor que uno no resiste salir a contarlo</h4>
+            <span class="ed-readmore">Leer la nota <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <!-- COLUMNA DERECHA -->
+    <div class="ed-right">
+
+      <div class="card-3d">
+        <a class="ed-row" href="https://circuitogastronomico.com/brunch-en-nueva-cordoba-las-opciones-de-verasens-para-disfrutar-a-cualquier-hora/">
+          <div class="ed-row__img">
+            <img src="https://circuitogastronomico.com/wp-content/uploads/2024/05/Verasens-2025_30-cuadrado-1024x1024.jpg" alt="Verasens brunch" loading="lazy">
+          </div>
+          <div class="ed-row__body">
+            <div class="ed-meta">
+              <span class="ed-time">5 min de lectura</span>
+            </div>
+            <h4 class="ed-row__title serif">Brunch en Nueva Córdoba: las opciones de Verasens para disfrutar a cualquier hora</h4>
+            <span class="ed-readmore">Leer la nota <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Card vertical + publicidad -->
+      <div class="ed-right-bottom ed-right-bottom--single-ad">
+
+        <div class="card-3d">
+          <a class="ed-card" href="https://circuitogastronomico.com/asi-es-heroica-la-panaderia-rosarina-que-desembarco-en-nueva-cordoba/">
+            <div class="ed-card__img">
+              <img src="https://circuitogastronomico.com/wp-content/uploads/2026/07/heroica1-1.jpg" alt="Heroica panadería" loading="lazy">
+            </div>
+            <div class="ed-card__body">
+              <div class="ed-meta">
+                <span class="ed-time">5 min de lectura</span>
+              </div>
+              <h4 class="ed-card__title serif">Así es Heroica, la panadería rosarina que desembarcó en Nueva Córdoba</h4>
+              <span class="ed-readmore">Leer la nota <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+            </div>
+          </a>
+        </div>
+
+        <div class="card-3d" style="align-self: start">
+          <a class="ed-ad-vertical" href="https://www.instagram.com/" target="_blank" rel="noopener sponsored" aria-label="Auspiciante">
+            <img src="PublicidadVertical.png" alt="Auspiciante">
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ AD MOBILE (solo mobile) ============ -->
+<div class="ad-mobile">
+  <div class="wrap">
+    <div class="sponsors__divider">
+      <span class="kicker">Con el apoyo de</span>
+      <span class="sponsors__line"></span>
+    </div>
+    <div class="card-3d" style="width: 218px">
+      <a href="https://www.instagram.com/" target="_blank" rel="noopener sponsored" aria-label="Auspiciante">
+        <img src="MobileVertical2.png" alt="Auspiciante">
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ============ DIRECTORIO ============ -->
+<section class="dir" id="directorio">
+  <div class="section wrap" style="padding-block:clamp(64px,10vh,120px)">
+    <div class="section__head reveal">
+      <h2 class="section__title serif" style="max-width:none;white-space:nowrap">Restaurantes <em>más buscados</em></h2>
+      <a class="section__more" href="https://app.circuitogastronomico.com/buscador/">Explorar la guía
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+    <div class="dir__carousel">
+      <div class="dir__track" id="dir-track">
+        <a class="dir__card reveal" href="https://app.circuitogastronomico.com/restaurante/pisa/">
+          <div class="dir__card-img">
+            <span class="dir__card-rank">01</span>
+            <img src="https://appetizer.com.ar/assets/uploads/restaurantes/c3266-pisa3.jpg" alt="Pisa" loading="lazy">
+          </div>
+          <div class="dir__card-body">
+            <div class="dir__card-top">
+              <span class="dir__card-name serif">Pisa</span>
+              <span class="dir__card-go"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+            </div>
+            <span class="dir__card-cat">Pizzas · Veggie</span>
+            <span class="dir__card-zone">General Paz</span>
+          </div>
+        </a>
+        <a class="dir__card reveal" href="https://app.circuitogastronomico.com/restaurante/renato/">
+          <div class="dir__card-img">
+            <span class="dir__card-rank">02</span>
+            <img src="https://appetizer.com.ar/assets/uploads/restaurantes/48e42-renato-2-cuadrado.jpg" alt="Renato" loading="lazy">
+          </div>
+          <div class="dir__card-body">
+            <div class="dir__card-top">
+              <span class="dir__card-name serif">Renato</span>
+              <span class="dir__card-go"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+            </div>
+            <span class="dir__card-cat">Lomitos · Pizzas</span>
+            <span class="dir__card-zone">Quebrada de las Rosas</span>
+          </div>
+        </a>
+        <a class="dir__card reveal" href="https://app.circuitogastronomico.com/restaurante/pepecito/">
+          <div class="dir__card-img">
+            <span class="dir__card-rank">03</span>
+            <img src="https://appetizer.com.ar/assets/uploads/restaurantes/37846-pepecito-2025_36-cuadrado.jpg" alt="Pepecito" loading="lazy">
+          </div>
+          <div class="dir__card-body">
+            <div class="dir__card-top">
+              <span class="dir__card-name serif">Pepecito</span>
+              <span class="dir__card-go"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+            </div>
+            <span class="dir__card-cat">Lomitos · Pizzas</span>
+            <span class="dir__card-zone">Villa Belgrano</span>
+          </div>
+        </a>
+        <a class="dir__card reveal" href="https://app.circuitogastronomico.com/restaurante/cru-pizzas-de-calle/">
+          <div class="dir__card-img">
+            <span class="dir__card-rank">04</span>
+            <img src="https://appetizer.com.ar/assets/uploads/restaurantes/0d7bb-cru-fachada.jpg" alt="CRU Pizza de calle" loading="lazy">
+          </div>
+          <div class="dir__card-body">
+            <div class="dir__card-top">
+              <span class="dir__card-name serif">CRU Pizza de calle</span>
+              <span class="dir__card-go"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+            </div>
+            <span class="dir__card-cat">Pizzas · Take Away</span>
+            <span class="dir__card-zone">Nueva Córdoba</span>
+          </div>
+        </a>
+        <a class="dir__card reveal" href="https://app.circuitogastronomico.com/restaurante/pierino/">
+          <div class="dir__card-img">
+            <span class="dir__card-rank">05</span>
+            <img src="https://appetizer.com.ar/assets/uploads/restaurantes/31d40-pierino-4-cuadrado.jpg" alt="Pierino" loading="lazy">
+          </div>
+          <div class="dir__card-body">
+            <div class="dir__card-top">
+              <span class="dir__card-name serif">Pierino</span>
+              <span class="dir__card-go"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+            </div>
+            <span class="dir__card-cat">Lomitos · Pizzas</span>
+            <span class="dir__card-zone">Rosedal</span>
+          </div>
+        </a>
+        <a class="dir__card reveal" href="https://app.circuitogastronomico.com/restaurante/pizza-madre/">
+          <div class="dir__card-img">
+            <span class="dir__card-rank">06</span>
+            <img src="https://appetizer.com.ar/assets/uploads/restaurantes/2e4ac-pizza-madre-1.jpeg" alt="Pizza Madre" loading="lazy">
+          </div>
+          <div class="dir__card-body">
+            <div class="dir__card-top">
+              <span class="dir__card-name serif">Pizza Madre</span>
+              <span class="dir__card-go"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+            </div>
+            <span class="dir__card-cat">Pizzas</span>
+            <span class="dir__card-zone">Centro</span>
+          </div>
+        </a>
+        <a class="dir__card reveal" href="https://app.circuitogastronomico.com/restaurante/alto-gandhi-pizza-napoletana/">
+          <div class="dir__card-img">
+            <span class="dir__card-rank">07</span>
+            <img src="https://appetizer.com.ar/assets/uploads/restaurantes/dac88-alto-gandhi-36-cuadrado.jpg" alt="Alto Gandhi Pizza Napoletana" loading="lazy">
+          </div>
+          <div class="dir__card-body">
+            <div class="dir__card-top">
+              <span class="dir__card-name serif">Alto Gandhi</span>
+              <span class="dir__card-go"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+            </div>
+            <span class="dir__card-cat">Pizza Napoletana</span>
+            <span class="dir__card-zone">Valle Escondido</span>
+          </div>
+        </a>
+        <a class="dir__card reveal" href="https://app.circuitogastronomico.com/restaurante/granero-faustino/">
+          <div class="dir__card-img">
+            <span class="dir__card-rank">08</span>
+            <img src="https://appetizer.com.ar/assets/uploads/restaurantes/a5865-granero-faustino-mila.jpeg" alt="Granero Faustino" loading="lazy">
+          </div>
+          <div class="dir__card-body">
+            <div class="dir__card-top">
+              <span class="dir__card-name serif">Granero Faustino</span>
+              <span class="dir__card-go"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+            </div>
+            <span class="dir__card-cat">Sándwiches · Pizzas</span>
+            <span class="dir__card-zone">Parque Sarmiento</span>
+          </div>
+        </a>
+        <a class="dir__card reveal" href="https://app.circuitogastronomico.com/restaurante/ahora-pizza/">
+          <div class="dir__card-img">
+            <span class="dir__card-rank">09</span>
+            <img src="https://appetizer.com.ar/assets/uploads/restaurantes/e5322-ahora-pizza-26-cuadrado.jpg" alt="Ahora Pizza" loading="lazy">
+          </div>
+          <div class="dir__card-body">
+            <div class="dir__card-top">
+              <span class="dir__card-name serif">Ahora Pizza</span>
+              <span class="dir__card-go"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+            </div>
+            <span class="dir__card-cat">Pizzas</span>
+            <span class="dir__card-zone">Nueva Córdoba</span>
+          </div>
+        </a>
+        <a class="dir__card reveal" href="https://app.circuitogastronomico.com/restaurante/junior-b-cordoba/">
+          <div class="dir__card-img">
+            <span class="dir__card-rank">10</span>
+            <img src="https://appetizer.com.ar/assets/uploads/restaurantes/8e49d-saveclip.app_454212950_893786562780410_4102068922729901651_n.jpg" alt="Junior B" loading="lazy">
+          </div>
+          <div class="dir__card-body">
+            <div class="dir__card-top">
+              <span class="dir__card-name serif">Junior B</span>
+              <span class="dir__card-go"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+            </div>
+            <span class="dir__card-cat">Cafetería · Pizzas</span>
+            <span class="dir__card-zone">Nueva Córdoba</span>
+          </div>
+        </a>
+        <a class="dir__card reveal" href="https://app.circuitogastronomico.com/restaurante/la-minuteria/">
+          <div class="dir__card-img">
+            <span class="dir__card-rank">11</span>
+            <img src="https://appetizer.com.ar/assets/uploads/restaurantes/be38f-la-minuteria-sandwich-de-mila.jpeg" alt="La Minutería" loading="lazy">
+          </div>
+          <div class="dir__card-body">
+            <div class="dir__card-top">
+              <span class="dir__card-name serif">La Minutería</span>
+              <span class="dir__card-go"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+            </div>
+            <span class="dir__card-cat">Parrilla · Pizzas</span>
+            <span class="dir__card-zone">Tejas del Sur</span>
+          </div>
+        </a>
+        <a class="dir__card reveal" href="https://app.circuitogastronomico.com/restaurante/primo-cerro/">
+          <div class="dir__card-img">
+            <span class="dir__card-rank">12</span>
+            <img src="https://appetizer.com.ar/assets/uploads/restaurantes/efa6e-primo-2025_24-cuadrado.jpg" alt="Primo Cerro" loading="lazy">
+          </div>
+          <div class="dir__card-body">
+            <div class="dir__card-top">
+              <span class="dir__card-name serif">Primo Cerro</span>
+              <span class="dir__card-go"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+            </div>
+            <span class="dir__card-cat">Carnes · Pescados</span>
+            <span class="dir__card-zone">Cerro de las Rosas</span>
+          </div>
+        </a>
+        <a class="dir__card reveal" href="https://app.circuitogastronomico.com/restaurante/santa-lucia/">
+          <div class="dir__card-img">
+            <span class="dir__card-rank">13</span>
+            <img src="https://appetizer.com.ar/assets/uploads/restaurantes/8dd9c-santa-lucia-33-cuadrado.jpg" alt="Santa Lucía" loading="lazy">
+          </div>
+          <div class="dir__card-body">
+            <div class="dir__card-top">
+              <span class="dir__card-name serif">Santa Lucía</span>
+              <span class="dir__card-go"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+            </div>
+            <span class="dir__card-cat">Casa de Té · Cafetería</span>
+            <span class="dir__card-zone">General Paz</span>
+          </div>
+        </a>
+        <a class="dir__card reveal" href="https://app.circuitogastronomico.com/restaurante/eleton-resort-spa/">
+          <div class="dir__card-img">
+            <span class="dir__card-rank">14</span>
+            <img src="https://appetizer.com.ar/assets/uploads/restaurantes/c2888-home-piscina.jpg" alt="Eleton Resort & SPA" loading="lazy">
+          </div>
+          <div class="dir__card-body">
+            <div class="dir__card-top">
+              <span class="dir__card-name serif">Eleton Resort & SPA</span>
+              <span class="dir__card-go"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+            </div>
+            <span class="dir__card-cat">Comer y Dormir</span>
+            <span class="dir__card-zone">Villa Carlos Paz</span>
+          </div>
+        </a>
+        <a class="dir__card reveal" href="https://app.circuitogastronomico.com/restaurante/san-pietro-cerro/">
+          <div class="dir__card-img">
+            <span class="dir__card-rank">15</span>
+            <img src="https://appetizer.com.ar/assets/uploads/restaurantes/46837-san-pietro-2025_22-cuadrado.jpg" alt="San Pietro Cerro" loading="lazy">
+          </div>
+          <div class="dir__card-body">
+            <div class="dir__card-top">
+              <span class="dir__card-name serif">San Pietro Cerro</span>
+              <span class="dir__card-go"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+            </div>
+            <span class="dir__card-cat">Cocina Italiana · Té</span>
+            <span class="dir__card-zone">Cerro de las Rosas</span>
+          </div>
+        </a>
+        <a class="dir__card reveal" href="https://app.circuitogastronomico.com/restaurante/crabs-marisqueria-resto/">
+          <div class="dir__card-img">
+            <span class="dir__card-rank">16</span>
+            <img src="https://appetizer.com.ar/assets/uploads/restaurantes/27328-crabs-13.jpg" alt="Crabs Marisquería & Restó" loading="lazy">
+          </div>
+          <div class="dir__card-body">
+            <div class="dir__card-top">
+              <span class="dir__card-name serif">Crabs Marisquería</span>
+              <span class="dir__card-go"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+            </div>
+            <span class="dir__card-cat">Pescados y Mariscos</span>
+            <span class="dir__card-zone">General Paz</span>
+          </div>
+        </a>
+        <a class="dir__card reveal" href="https://app.circuitogastronomico.com/restaurante/primo-restaurante/">
+          <div class="dir__card-img">
+            <span class="dir__card-rank">17</span>
+            <img src="https://appetizer.com.ar/assets/uploads/restaurantes/7bd15-umbral-1.jpeg" alt="Cabañas Umbral del Sol" loading="lazy">
+          </div>
+          <div class="dir__card-body">
+            <div class="dir__card-top">
+              <span class="dir__card-name serif">Umbral del Sol</span>
+              <span class="dir__card-go"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+            </div>
+            <span class="dir__card-cat">Comer y Dormir</span>
+            <span class="dir__card-zone">Villa Giardino</span>
+          </div>
+        </a>
+        <a class="dir__card reveal" href="https://app.circuitogastronomico.com/restaurante/pinche-cabron/">
+          <div class="dir__card-img">
+            <span class="dir__card-rank">18</span>
+            <img src="https://appetizer.com.ar/assets/uploads/restaurantes/32a85-pinche-cabron-tacos-.jpg" alt="Pinche Cabrón" loading="lazy">
+          </div>
+          <div class="dir__card-body">
+            <div class="dir__card-top">
+              <span class="dir__card-name serif">Pinche Cabrón</span>
+              <span class="dir__card-go"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+            </div>
+            <span class="dir__card-cat">Mexicana · Parrilla</span>
+            <span class="dir__card-zone">Villa Belgrano</span>
+          </div>
+        </a>
+        <a class="dir__card reveal" href="https://app.circuitogastronomico.com/restaurante/primo-restaurante/">
+          <div class="dir__card-img">
+            <span class="dir__card-rank">19</span>
+            <img src="https://appetizer.com.ar/assets/uploads/restaurantes/b5f18-primo-2.jpg" alt="Primo Restaurante" loading="lazy">
+          </div>
+          <div class="dir__card-body">
+            <div class="dir__card-top">
+              <span class="dir__card-name serif">Primo Restaurante</span>
+              <span class="dir__card-go"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+            </div>
+            <span class="dir__card-cat">Pescados · Carnes</span>
+            <span class="dir__card-zone">Alta Córdoba</span>
+          </div>
+        </a>
+        <a class="dir__card reveal" href="https://app.circuitogastronomico.com/restaurante/santacalma/">
+          <div class="dir__card-img">
+            <span class="dir__card-rank">20</span>
+            <img src="https://appetizer.com.ar/assets/uploads/restaurantes/ac80f-santa-calma_02-cuadrado.jpg" alt="Santa Calma" loading="lazy">
+          </div>
+          <div class="dir__card-body">
+            <div class="dir__card-top">
+              <span class="dir__card-name serif">Santa Calma</span>
+              <span class="dir__card-go"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+            </div>
+            <span class="dir__card-cat">Hamburguesas · Pizzas</span>
+            <span class="dir__card-zone">Nueva Córdoba</span>
+          </div>
+        </a>
+        <a class="dir__card reveal" href="https://app.circuitogastronomico.com/restaurante/el-papagayo/">
+          <div class="dir__card-img">
+            <span class="dir__card-rank">21</span>
+            <img src="https://appetizer.com.ar/assets/uploads/restaurantes/b0bdb-el-papagayo-1.jpg" alt="El Papagayo" loading="lazy">
+          </div>
+          <div class="dir__card-body">
+            <div class="dir__card-top">
+              <span class="dir__card-name serif">El Papagayo</span>
+              <span class="dir__card-go"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+            </div>
+            <span class="dir__card-cat">Cocina de Autor</span>
+            <span class="dir__card-zone">Centro</span>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="dir__nav">
+      <button class="dir__arrow" type="button" data-dir="-1" aria-label="Restaurante anterior">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>
+      </button>
+      <button class="dir__arrow" type="button" data-dir="1" aria-label="Siguiente restaurante">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ AUSPICIANTE COMER Y DORMIR (banner horizontal) ============ -->
+<aside class="sponsors" aria-label="Auspiciante">
+  <div class="wrap" style="border-bottom: none;">
+    <div class="sponsors__divider">
+      <span class="kicker">Con el apoyo de</span>
+      <span class="sponsors__line"></span>
+    </div>
+    <div class="card-3d">
+      <div class="sponsors__row">
+        <div class="sponsors__viewport">
+          <a class="sponsors__card active" href="https://www.instagram.com/" target="_blank" rel="noopener sponsored" aria-label="Auspiciante">
+            <picture>
+              <source media="(max-width: 768px)" srcset="Mobile Horizontal 2.png">
+              <img class="sponsors__img" src="Publicidad 1.png" alt="Auspiciante">
+            </picture>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top: clamp(24px, 4vw, 48px); border-bottom: 1px solid var(--line);"></div>
+  </div>
+</aside>
+
+<!-- ============ GASTRONOMÍA ARGENTINA ============ -->
+<section class="section wrap" id="gastronomia-argentina">
+  <div class="section__head reveal">
+    <h2 class="section__title serif" style="max-width:none;white-space:nowrap">Comer y Dormir <em>en Córdoba</em></h2>
+    <a class="section__more" href="https://circuitogastronomico.com/category/novedades-eventos/">Ver más notas
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+  </div>
+
+  <div class="ed-grid">
+
+    <!-- COLUMNA IZQUIERDA -->
+    <div class="ed-left ed-left--gastronomia">
+
+      <!-- 1. Card grande -->
+      <div class="card-3d">
+        <a class="ed-main" href="https://circuitogastronomico.com/que-hacer-en-vacaciones-de-invierno-en-cordoba-hoteles-gastronomia-y-experiencias/">
+          <div class="ed-main__img">
+            <img src="https://circuitogastronomico.com/wp-content/uploads/2026/07/valle-del-sol-climatizada.jpg" alt="Vacaciones de invierno en Córdoba" loading="lazy" style="object-position: center center;">
+          </div>
+          <div class="ed-main__body">
+            <div class="ed-meta">
+              <span class="ed-time">5 min de lectura</span>
+            </div>
+            <h3 class="ed-main__title serif">Qué hacer en vacaciones de invierno en Córdoba: hoteles, gastronomía y experiencias</h3>
+            <span class="ed-readmore">Leer la nota <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+          </div>
+        </a>
+      </div>
+
+      <!-- 2. Card horizontal debajo de la nota grande -->
+      <div class="card-3d" style="flex: 0 0 190px">
+        <a class="ed-row" href="https://circuitogastronomico.com/finde-largo-en-cordoba-propuestas-para-alojarte-comer-y-pasarla-bien/">
+          <div class="ed-row__img">
+            <img src="https://circuitogastronomico.com/wp-content/uploads/2025/11/Fachada-Domo-Aguada-de-Lunas-1024x768.jpg" alt="Finde largo en Córdoba" loading="lazy" style="object-position: center center;">
+          </div>
+          <div class="ed-row__body">
+            <div class="ed-meta">
+              <span class="ed-time">4 min de lectura</span>
+            </div>
+            <h4 class="ed-row__title serif">Finde largo en Córdoba: propuestas para alojarte, comer y pasarla bien</h4>
+            <span class="ed-readmore">Leer la nota <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+          </div>
+        </a>
+      </div>
+
+    </div>
+
+    <!-- COLUMNA DERECHA -->
+    <div class="ed-right">
+
+      <!-- 2. Card horizontal -->
+      <div class="card-3d">
+        <a class="ed-row" href="https://circuitogastronomico.com/complejo-valle-del-sol-una-propuesta-turistica-que-sigue-creciendo/">
+          <div class="ed-row__img">
+            <img src="https://circuitogastronomico.com/wp-content/uploads/2026/07/Complejo-Valle-del-Sol-2025_02-baja-683x1024.jpg" alt="Complejo Valle del Sol" loading="lazy" style="object-position: center center;">
+          </div>
+          <div class="ed-row__body">
+            <div class="ed-meta">
+              <span class="ed-time">4 min de lectura</span>
+            </div>
+            <h4 class="ed-row__title serif">Complejo Valle del Sol: una propuesta turística que sigue creciendo</h4>
+            <span class="ed-readmore">Leer la nota <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Card vertical + publicidad -->
+      <div class="ed-right-bottom ed-right-bottom--single-ad">
+
+        <div class="card-3d">
+          <a class="ed-card" href="https://circuitogastronomico.com/vacaciones-de-invierno-en-calamuchita-vinos-gastronomia-y-sierras-en-bodega-vista-grande/">
+            <div class="ed-card__img">
+              <img src="https://circuitogastronomico.com/wp-content/uploads/2026/06/bodega-vista-grande-1024x682.jpeg" alt="Vacaciones de invierno en Calamuchita" loading="lazy" style="object-position: center center;">
+            </div>
+            <div class="ed-card__body">
+              <div class="ed-meta">
+                <span class="ed-time">3 min de lectura</span>
+              </div>
+              <h4 class="ed-card__title serif">Vacaciones de invierno en Calamuchita: vinos, gastronomía y sierras en Bodega Vista Grande</h4>
+              <span class="ed-readmore">Leer la nota <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+            </div>
+          </a>
+        </div>
+
+        <div class="card-3d" style="align-self: start">
+          <a class="ed-ad-vertical" href="https://www.instagram.com/" target="_blank" rel="noopener sponsored" aria-label="Auspiciante">
+            <img src="PublicidadVertical2.png" alt="Auspiciante">
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ AD MOBILE COMER Y DORMIR (solo mobile) ============ -->
+<div class="ad-mobile">
+  <div class="wrap">
+    <div class="sponsors__divider">
+      <span class="kicker">Con el apoyo de</span>
+      <span class="sponsors__line"></span>
+    </div>
+    <div class="card-3d" style="width: 218px">
+      <a href="https://www.instagram.com/" target="_blank" rel="noopener sponsored" aria-label="Auspiciante">
+        <img src="Mobile vertical.png" alt="Auspiciante">
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ============ PROTAGONISTA ============ -->
+<section class="section" id="protagonista">
+  <div class="prot-smoke" aria-hidden="true">
+    <span class="prot-smoke__blob prot-smoke__blob--1"></span>
+    <span class="prot-smoke__blob prot-smoke__blob--2"></span>
+    <span class="prot-smoke__blob prot-smoke__blob--3"></span>
+    <span class="prot-smoke__blob prot-smoke__blob--4"></span>
+    <span class="prot-smoke__blob prot-smoke__blob--5"></span>
+  </div>
+  <div class="wrap">
+  <div class="section__head reveal">
+    <h2 class="section__title serif">Protagonista <em>del mes</em></h2>
+  </div>
+  <div class="spot reveal">
+    <div class="spot__media">
+      <img src="https://circuitogastronomico.com/wp-content/uploads/2026/07/Elenia_41-cuadrado.jpg" alt="Martín Becher y Gastón Zabala - Elenia" loading="lazy">
+    </div>
+    <div class="spot__body">
+      <blockquote class="spot__quote serif">"El bar deportivo que convirtió el <span>tercer tiempo</span> en una experiencia gastronómica."</blockquote>
+      <p class="spot__text">Martín Becher y Gastón Zabala cuentan cómo Elenia convirtió el tercer tiempo en una experiencia de buena comida y charlas entre amigos.</p>
+      <a class="btn" href="https://circuitogastronomico.com/entrevista-a-martin-becher-y-gaston-zabala-de-elenia-el-bar-deportivo-que-se-expande-a-la-zona-sur/">
+        Leer la entrevista
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+  </div>
+</section>
+
+
+<!-- ============ NOVEDADES Y EVENTOS ============ -->
+<section class="section wrap" id="novedades">
+  <div class="section__head reveal">
+    <h2 class="section__title serif">Novedades y <em>eventos</em></h2>
+    <a class="section__more" href="https://circuitogastronomico.com/category/novedades-eventos/">Ver más notas
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+  </div>
+
+  <div class="ed-grid ed-grid--novedades">
+
+    <!-- COLUMNA IZQUIERDA -->
+    <div class="ed-left ed-left--gastronomia">
+      <div class="card-3d">
+        <a class="ed-main" href="https://circuitogastronomico.com/guia-michelin-2026-argentina-ya-tiene-14-restaurantes-con-estrellas-y-suma-nuevos-reconocimientos/">
+          <div class="ed-main__img">
+            <img src="https://circuitogastronomico.com/wp-content/uploads/2026/07/diam-s-mendoza.jpg" alt="Guía Michelin 2026 Argentina" loading="lazy" style="object-position: center 65%;">
+          </div>
+          <div class="ed-main__body">
+            <div class="ed-meta">
+              <span class="ed-time">4 min de lectura</span>
+            </div>
+            <h3 class="ed-main__title serif">Guía Michelin 2026: Argentina ya tiene 14 restaurantes con estrellas y suma nuevos reconocimientos</h3>
+            <span class="ed-readmore">Leer la nota <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+          </div>
+        </a>
+      </div>
+
+      <div class="card-3d" style="flex: 0 0 190px">
+        <a class="ed-row" href="https://circuitogastronomico.com/100-mil-visitantes-pasaron-por-la-20-edicion-de-caminos-y-sabores/">
+          <div class="ed-row__img">
+            <img src="https://circuitogastronomico.com/wp-content/uploads/2026/07/caminos-y-sabores-2026-1.jpg" alt="Caminos y Sabores 2026" loading="lazy" style="object-position: center center;">
+          </div>
+          <div class="ed-row__body">
+            <div class="ed-meta">
+              <span class="ed-time">4 min de lectura</span>
+            </div>
+            <h4 class="ed-row__title serif">100 mil visitantes pasaron por la 20° edición de Caminos y Sabores</h4>
+            <span class="ed-readmore">Leer la nota <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <!-- COLUMNA DERECHA -->
+    <div class="ed-right">
+
+      <!-- Card horizontal -->
+      <div class="card-3d">
+        <a class="ed-row" href="https://circuitogastronomico.com/cordoba-vuelve-a-ser-sede-de-chachingo-wine-fair-la-feria-creada-por-alejandro-vigil/">
+          <div class="ed-row__img">
+            <img src="https://circuitogastronomico.com/wp-content/uploads/2026/07/vigil-23-1024x642.jpg" alt="Chachingo Wine Fair" loading="lazy" style="object-position: center center;">
+          </div>
+          <div class="ed-row__body">
+            <div class="ed-meta">
+              <span class="ed-time">3 min de lectura</span>
+            </div>
+            <h4 class="ed-row__title serif">Córdoba vuelve a ser sede de Chachingo Wine Fair, la feria creada por Alejandro Vigil</h4>
+            <span class="ed-readmore">Leer la nota <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Card vertical + publicidad -->
+      <div class="ed-right-bottom ed-right-bottom--single-ad">
+
+        <div class="card-3d">
+          <a class="ed-card" href="https://circuitogastronomico.com/wine-tour-edicion-especial-colonia-caroya-viaje-a-las-raices/">
+            <div class="ed-card__img">
+              <img src="https://circuitogastronomico.com/wp-content/uploads/2026/07/wine-tour1.jpeg" alt="Wine Tour Colonia Caroya" loading="lazy" style="object-position: center center;">
+            </div>
+            <div class="ed-card__body">
+              <div class="ed-meta">
+                <span class="ed-time">3 min de lectura</span>
+              </div>
+              <h4 class="ed-card__title serif">Wine Tour edición especial: Colonia Caroya, viaje a las raíces</h4>
+              <span class="ed-readmore">Leer la nota <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+            </div>
+          </a>
+        </div>
+
+        <div class="card-3d" style="align-self: start">
+          <a class="ed-ad-vertical" href="https://www.instagram.com/" target="_blank" rel="noopener sponsored" aria-label="Auspiciante">
+            <img src="PublicidadVertical3.png" alt="Auspiciante" style="object-position: top">
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ AD MOBILE NOVEDADES (solo mobile) ============ -->
+<div class="ad-mobile ad-mobile--horizontal">
+  <div class="wrap">
+    <div class="sponsors__divider">
+      <span class="kicker">Con el apoyo de</span>
+      <span class="sponsors__line"></span>
+    </div>
+    <div class="card-3d" style="width: 100%">
+      <a href="https://www.instagram.com/" target="_blank" rel="noopener sponsored" aria-label="Auspiciante">
+        <img src="Mobile horizontal.png" alt="Auspiciante">
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="ad-mobile ad-mobile--horizontal">
+  <div class="wrap">
+    <div class="ad-mobile__divider"></div>
+    <div class="card-3d" style="width: 100%">
+      <a href="https://www.instagram.com/" target="_blank" rel="noopener sponsored" aria-label="Auspiciante">
+        <img src="Mobile Horizontal 2.png" alt="Auspiciante">
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ============ PRODUCTOS Y RECETAS ============ -->
+<section class="section" id="recetas">
+  <div class="wrap">
+  <div class="section__head reveal">
+    <h2 class="section__title serif">Productos y <em>recetas</em></h2>
+    <a class="section__more" href="https://circuitogastronomico.com/category/productos-y-recetas/">Ver más notas
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+  </div>
+
+  <div class="rec-grid reveal">
+
+    <!-- COLUMNA IZQUIERDA — lista de artículos -->
+    <div class="rec-left">
+      <a class="rec-row" href="https://circuitogastronomico.com/como-entrarle-a-una-picada-y-no-comer-de-mas/">
+        <div class="rec-row__img">
+          <img src="https://circuitogastronomico.com/wp-content/uploads/2025/04/Caja-La-Gurmet-2023-12_50-baja1-1024x683.jpg" alt="Cómo entrarle a una picada" loading="lazy">
+        </div>
+        <div class="rec-row__body">
+          <h4 class="rec-row__title serif">Cómo entrarle a una picada y no comer de más</h4>
+          <span class="rec-btn">Ver receta →</span>
+        </div>
+      </a>
+
+    </div>
+
+    <!-- DIVISOR -->
+    <div class="rec-divider"></div>
+
+    <!-- COLUMNA DERECHA — productos destacados -->
+    <div class="rec-right">
+
+      <a class="rec-product" href="https://circuitogastronomico.com/blend-cordobes-asi-es-el-nuevo-cafe-de-cherry-season-que-representa-a-cordoba/">
+        <div class="rec-product__img">
+          <img src="https://circuitogastronomico.com/wp-content/uploads/2026/07/cherry-cafe-cordoba.png" alt="Blend Cordobés Cherry Season" loading="lazy">
+        </div>
+        <div class="rec-product__body">
+          <span class="rec-brand">Cherry Season</span>
+          <h4 class="rec-product__title serif">Blend Cordobés — el café que representa a Córdoba</h4>
+          <span class="rec-product__btn">Ver producto →</span>
+        </div>
+      </a>
+
+      <a class="rec-product" href="https://circuitogastronomico.com/la-gurmet-de-julio-para-llevar-tus-picadas-a-otro-nivel/">
+        <div class="rec-product__img">
+          <img src="https://circuitogastronomico.com/wp-content/uploads/2024/04/Caja-La-Gurmet-2023-12_27-baja1-1024x683.jpg" alt="La Gurmet picada gourmet" loading="lazy">
+        </div>
+        <div class="rec-product__body">
+          <span class="rec-brand">La Gurmet</span>
+          <h4 class="rec-product__title serif">Selección de julio para tu picada</h4>
+          <span class="rec-product__btn">Ver selección →</span>
+        </div>
+      </a>
+
+      <a class="rec-product" href="https://circuitogastronomico.com/donde-comprar-productos-para-alentar-a-la-seleccion-argentina/">
+        <div class="rec-product__img">
+          <img src="https://circuitogastronomico.com/wp-content/uploads/2026/06/la-cautiva-mundial-1024x683.png" alt="Productos Selección Argentina" loading="lazy">
+        </div>
+        <div class="rec-product__body">
+          <span class="rec-brand">Guía</span>
+          <h4 class="rec-product__title serif">Dónde comprar productos para alentar a la Selección Argentina</h4>
+          <span class="rec-product__btn">Leer la nota →</span>
+        </div>
+      </a>
+
+    </div>
+
+  </div>
+  </div>
+</section>
+
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="wrap">
+  <div class="footer__top">
+    <div class="footer__brand">
+      <b class="serif">Circuito Gastronómico</b>
+      <p>La guía y revista de la gastronomía cordobesa. Las historias detrás de cada mesa de Córdoba.</p>
+      <div class="footer__social">
+        <a href="https://www.instagram.com/circuito_gastronomico/" aria-label="Instagram">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a href="https://www.facebook.com/circuitogastronomico" aria-label="Facebook">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+        </a>
+        <a href="https://www.youtube.com/user/CircuitoGastronomic" aria-label="YouTube">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 8.5a3 3 0 00-2-2C18 6 12 6 12 6s-6 0-8 .5a3 3 0 00-2 2A31 31 0 002 12a31 31 0 00.5 3.5 3 3 0 002 2C6.5 18 12 18 12 18s6 0 8-.5a3 3 0 002-2A31 31 0 0022 12a31 31 0 00-.5-3.5z"/><path d="m10 15 5-3-5-3z" fill="currentColor" stroke="none"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer__col">
+      <h4>Revista</h4>
+      <a href="https://circuitogastronomico.com/category/rankings-los-mejores/">Rankings</a>
+      <a href="https://circuitogastronomico.com/category/restaurantes/">Restaurantes</a>
+      <a href="https://circuitogastronomico.com/category/protagonistas/">Protagonistas</a>
+      <a href="https://circuitogastronomico.com/category/novedades-eventos/">Novedades</a>
+    </div>
+    <div class="footer__col">
+      <h4>Explorar</h4>
+      <a href="https://circuitogastronomico.com/category/comer-y-dormir/">Comer y Dormir</a>
+      <a href="https://circuitogastronomico.com/category/productos-y-recetas/">Productos y Recetas</a>
+      <a href="https://app.circuitogastronomico.com/">Guía de restaurantes</a>
+      <a href="https://circuitogastronomico.com/tienda/">Tienda</a>
+    </div>
+    <div class="footer__col">
+      <h4>Nosotros</h4>
+      <a href="https://circuitogastronomico.com/quienes-somos">Quiénes somos</a>
+      <a href="mailto:contacto@circuitogastronomico.com">Contacto</a>
+    </div>
+    <div class="footer__col">
+      <h4>Cómo pautar</h4>
+      <a href="https://circuitogastronomico.com/bares-y-restaurantes/">Bares y Restaurantes</a>
+      <a href="https://circuitogastronomico.com/hoteles-y-cabanas/">Hoteles y Cabañas</a>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <span>© 2026 Circuito Gastronómico · Powered by <a href="https://grupoeon.com.ar/">Grupo EON</a></span>
+  </div>
+  </div>
+</footer>
+
+<script>
+  /* Newsletter — palabra rotativa */
+  (function () {
+    var words = document.querySelectorAll('#cgWordSwap span');
+    if (!words.length) return;
+    var idx = 0;
+    setInterval(function () {
+      words[idx].classList.remove('active');
+      idx = (idx + 1) % words.length;
+      words[idx].classList.add('active');
+    }, 2600);
+  })();
+</script>
+<script src="main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/SplitText.min.js"></script>
+<script>
+  (function () {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    gsap.registerPlugin(ScrollTrigger, SplitText);
+
+    /* ---- Cursor personalizado ---- */
+    var dot  = document.getElementById('cur-dot');
+    var halo = document.getElementById('cur-halo');
+
+    /* Solo en dispositivos con puntero fino (mouse) */
+    if (dot && halo && window.matchMedia('(pointer: fine)').matches) {
+      var mx = window.innerWidth / 2, my = window.innerHeight / 2;
+
+      /* El dot sigue al mouse sin lag */
+      window.addEventListener('mousemove', function (e) {
+        mx = e.clientX; my = e.clientY;
+        gsap.to(dot, { x: mx, y: my, duration: 0.08, ease: 'none', overwrite: true });
+        gsap.to(halo, { x: mx, y: my, duration: 0.35, ease: 'power2.out', overwrite: true });
+      });
+
+      /* Hover sobre links, botones y cards */
+      var hoverEls = document.querySelectorAll('a, button, [role="tab"], .card-3d');
+      hoverEls.forEach(function (el) {
+        el.addEventListener('mouseenter', function () { halo.classList.add('is-hover'); });
+        el.addEventListener('mouseleave', function () { halo.classList.remove('is-hover'); });
+      });
+
+      /* Ocultar al salir de la ventana */
+      document.addEventListener('mouseleave', function () {
+        dot.classList.add('is-hidden'); halo.classList.add('is-hidden');
+      });
+      document.addEventListener('mouseenter', function () {
+        dot.classList.remove('is-hidden'); halo.classList.remove('is-hidden');
+      });
+    }
+
+    /* ---- Imágenes de categorías: solo en hover ---- */
+    gsap.utils.toArray('.cat-card').forEach(function (card) {
+      var bg = card.querySelector('.cat-card__bg');
+      if (!bg) return;
+
+      card.addEventListener('mouseenter', function () {
+        gsap.to(bg, { opacity: 1, scale: 1, duration: 0.55, ease: 'power2.out', overwrite: true });
+      });
+      card.addEventListener('mouseleave', function () {
+        gsap.to(bg, { opacity: 0, scale: 1.06, duration: 0.45, ease: 'power2.in', overwrite: true });
+      });
+    });
+
+    /* ---- Cards de categorías: entrada escalonada ---- */
+    gsap.utils.toArray('.cat-card').forEach(function (card, i) {
+      gsap.from(card, {
+        y: 50,
+        opacity: 0,
+        duration: 0.8,
+        ease: 'power3.out',
+        scrollTrigger: {
+          trigger: card,
+          start: 'top 90%',
+        },
+        delay: (i % 3) * 0.08
+      });
+    });
+
+    /* Esperar que las fuentes (Playfair Display) carguen antes de splitear */
+    document.fonts.ready.then(function () {
+      document.querySelectorAll('.section__title').forEach(function (title) {
+        SplitText.create(title, {
+          type: 'chars,words',
+          mask: 'chars',
+          autoSplit: true,
+          onSplit: function (self) {
+            return gsap.from(self.chars, {
+              y: '110%',
+              duration: 0.7,
+              ease: 'power3.out',
+              stagger: 0.03,
+              scrollTrigger: {
+                trigger: title,
+                start: 'top 88%',
+              }
+            });
+          }
+        });
+      });
+    });
+
+    /* ---- Bento carousel auspiciantes ---- */
+    (function () {
+      var viewport = document.getElementById('sponsorsStage');
+      var progress = document.getElementById('sponsorsProgress');
+      var counter  = document.getElementById('sponsorsCounter');
+      if (!viewport || !progress) return;
+
+      var cards    = viewport.querySelectorAll('.sponsors__card');
+      var total    = cards.length;
+      var current  = 0;
+      var DURATION = 5500;
+      var timer;
+
+      function pad(n) { return n < 10 ? '0' + n : '' + n; }
+
+      function goTo(idx) {
+        cards[current].classList.remove('active');
+        current = (idx + total) % total;
+        cards[current].classList.add('active');
+        if (counter) counter.textContent = pad(current + 1) + ' / ' + pad(total);
+        startProgress();
+      }
+
+      function startProgress() {
+        clearTimeout(timer);
+        progress.style.transition = 'none';
+        progress.style.width = '0%';
+        progress.offsetWidth;
+        progress.style.transition = 'width ' + DURATION + 'ms linear';
+        progress.style.width = '100%';
+        timer = setTimeout(function () { goTo(current + 1); }, DURATION);
+      }
+
+      viewport.addEventListener('mouseenter', function () {
+        clearTimeout(timer);
+        progress.style.transition = 'none';
+      });
+      viewport.addEventListener('mouseleave', startProgress);
+
+      startProgress();
+    })();
+
+  })();
+</script>
+</body>
+</html>
