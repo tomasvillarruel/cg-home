@@ -3,6 +3,85 @@
 
   var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  /* ---- Títulos de las cards de notas: máximo 110 caracteres (con espacios) ----
+     No aplica al título del hero (.hero__title, .post-hero__title, .cat-hero__title).
+     WP: implementar con un helper equivalente en el loop, ej.:
+
+       function cg_trim_title($title, $max = 110) {
+         if (mb_strlen($title) > $max) {
+           return rtrim(mb_substr($title, 0, $max)) . '...';
+         }
+         return $title;
+       }
+
+       <?php echo esc_html(cg_trim_title(get_the_title())); ?>
+  ---- */
+  (function () {
+    var MAX_TITLE_CHARS = 110;
+    var titles = document.querySelectorAll(
+      '.ed-main__title, .ed-row__title, .ed-card__title, ' +
+      '.rec-row__title, .rec-product__title, ' +
+      '.sidebar-list__title, .sidebar-ranking__title'
+    );
+    titles.forEach(function (el) {
+      var text = el.textContent.trim();
+      if (text.length > MAX_TITLE_CHARS) {
+        el.setAttribute('title', text);
+        el.textContent = text.slice(0, MAX_TITLE_CHARS).replace(/\s+$/, '') + '...';
+      }
+    });
+  })();
+
+  /* ---- Marquesina: distancia de scroll medida por JS ----
+     El -50% por CSS depende de que las dos copias de .marquee-set midan
+     exactamente lo mismo; cualquier redondeo de subpíxel entre ambas
+     (típico con paddings en vw/clamp) provoca un salto visible al hacer
+     el loop. Medimos el ancho real de la primera copia con getBoundingClientRect
+     (subpíxel) y lo usamos como distancia fija de la animación. ---- */
+  (function () {
+    var track = document.querySelector('.marquee-track');
+    var firstSet = track && track.querySelector('.marquee-set:not([aria-hidden])');
+    if (!track || !firstSet) return;
+
+    function measure() {
+      var w = firstSet.getBoundingClientRect().width;
+      if (w > 0) track.style.setProperty('--marquee-distance', '-' + w + 'px');
+      return w;
+    }
+
+    /* No arrancar la animación hasta que la tipografía real esté cargada:
+       si arranca antes y la fuente hace swap (FOUT) mientras ya está en
+       movimiento, el ancho cambia a mitad de vuelta y se ve como un salto/corte. */
+    function start() {
+      measure();
+      track.classList.add('is-ready');
+    }
+
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(start);
+    } else {
+      start();
+    }
+
+    var resizeTimer;
+    window.addEventListener('resize', function () {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(measure, 150);
+    });
+
+    /* El texto se mueve todo el tiempo: si el click depende de acertarle
+       a una palabra en movimiento, casi siempre falla. Pausamos SOLO
+       mientras el mouse está sobre una palabra puntual (no toda la barra),
+       así se puede clickear con precisión sin que el resto del recorrido
+       se sienta "trabado". */
+    firstSet.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('mouseenter', function () { track.classList.add('is-paused'); });
+      a.addEventListener('mouseleave', function () { track.classList.remove('is-paused'); });
+      a.addEventListener('focus', function () { track.classList.add('is-paused'); });
+      a.addEventListener('blur', function () { track.classList.remove('is-paused'); });
+    });
+  })();
+
   /* ---- Nav: shrink al hacer scroll ---- */
   var nav = document.getElementById('site-nav');
   if (nav) {
@@ -89,6 +168,7 @@
     var slides = hero.querySelectorAll('.hero__slide');
     var panels = hero.querySelectorAll('.hero__panel');
     var dots   = hero.querySelectorAll('.hero__dot');
+    var nextItems = hero.querySelectorAll('.hero__next-item');
     var countEl = hero.querySelector('.hero__count b');
     var arrows  = hero.querySelectorAll('.hero__arrow');
     var total   = slides.length;
@@ -106,6 +186,7 @@
         d.classList.toggle('active', i === index);
         d.setAttribute('aria-selected', String(i === index));
       });
+      nextItems.forEach(function (n, i) { n.classList.toggle('active', i === index); });
       if (countEl) countEl.textContent = pad(index);
     }
 
@@ -131,6 +212,9 @@
         go(index + parseInt(a.dataset.dir, 10));
       });
     });
+    nextItems.forEach(function (n, i) {
+      n.addEventListener('click', function () { go(i); });
+    });
 
     hero.addEventListener('mouseenter', function () { clearInterval(timer); });
     hero.addEventListener('mouseleave', restart);
@@ -150,6 +234,36 @@
 
     show(0);
     restart();
+  }
+
+  /* ---- Carrusel del directorio (restaurantes más buscados) ---- */
+  var dirTrack = document.getElementById('dir-track');
+  if (dirTrack) {
+    var dirArrows = document.querySelectorAll('.dir__arrow');
+
+    function dirStep() {
+      var card = dirTrack.querySelector('.dir__card');
+      var gap = parseFloat(getComputedStyle(dirTrack).columnGap) || 0;
+      return card ? card.getBoundingClientRect().width + gap : 300;
+    }
+
+    function dirUpdateArrows() {
+      var max = dirTrack.scrollWidth - dirTrack.clientWidth - 2;
+      dirArrows.forEach(function (a) {
+        var dir = parseInt(a.dataset.dir, 10);
+        a.disabled = dir < 0 ? dirTrack.scrollLeft <= 0 : dirTrack.scrollLeft >= max;
+      });
+    }
+
+    dirArrows.forEach(function (a) {
+      a.addEventListener('click', function () {
+        dirTrack.scrollBy({ left: dirStep() * parseInt(a.dataset.dir, 10), behavior: 'smooth' });
+      });
+    });
+
+    dirTrack.addEventListener('scroll', dirUpdateArrows, { passive: true });
+    window.addEventListener('resize', dirUpdateArrows);
+    dirUpdateArrows();
   }
 
   /* ---- Rotación de banners sponsors ---- */
